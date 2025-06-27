@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Signal – Smarter Supports for NDIS Providers</title>
+    <meta name="description" content="Discover Support Signal, the AI-powered incident intelligence platform for NDIS providers. Turn compliance into insight.">
+    <meta name="keywords" content="NDIS platform, incident reporting, support provider software, compliance intelligence, AI SaaS NDIS">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'teal-gradient-start': '#3CD7C4',
+                        'teal-gradient-mid': '#2CC4B7',
+                        'teal-gradient-end': '#1798A2',
+                        'navy-primary': '#0C2D55',
+                        'soft-grey': '#F4F7FA',
+                        'cta-blue': '#287BCB',
+                        'success-green': '#27AE60',
+                        'alert-amber': '#F2C94C',
+                        'christmas-red': '#DC2626',
+                        'christmas-green': '#16A34A',
+                        'christmas-gold': '#FBBF24'
+                    },
+                    animation: {
+                        'snow': 'snow 10s linear infinite',
+                        'twinkle': 'twinkle 2s ease-in-out infinite alternate',
+                        'bounce-gentle': 'bounce-gentle 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        snow: {
+                            '0%': { transform: 'translateY(-100vh) translateX(0px)' },
+                            '100%': { transform: 'translateY(100vh) translateX(100px)' }
+                        },
+                        twinkle: {
+                            '0%': { opacity: '0.3' },
+                            '100%': { opacity: '1' }
+                        },
+                        'bounce-gentle': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            user-select: none;
+            pointer-events: none;
+            color: rgba(255, 255, 255, 0.8);
+            z-index: 1000;
+        }
+        .christmas-lights {
+            background: linear-gradient(90deg, #DC2626, #FBBF24, #16A34A, #3B82F6, #DC2626);
+            background-size: 20px 100%;
+            animation: lights 2s linear infinite;
+        }
+        @keyframes lights {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 0%; }
+        }
+    </style>
+</head>
+<body class="bg-soft-grey overflow-x-hidden relative">
+    <!-- Christmas Lights Border -->
+    <div class="christmas-lights h-1 w-full fixed top-0 z-50"></div>
+    
+    <!-- Snowflakes -->
+    <div class="snowflake animate-snow" style="left: 10%; animation-delay: 0s; font-size: 20px;">❄</div>
+    <div class="snowflake animate-snow" style="left: 20%; animation-delay: 1s; font-size: 25px;">❅</div>
+    <div class="snowflake animate-snow" style="left: 30%; animation-delay: 2s; font-size: 15px;">❄</div>
+    <div class="snowflake animate-snow" style="left: 40%; animation-delay: 3s; font-size: 20px;">❅</div>
+    <div class="snowflake animate-snow" style="left: 50%; animation-delay: 4s; font-size: 18px;">❄</div>
+    <div class="snowflake animate-snow" style="left: 60%; animation-delay: 1.5s; font-size: 22px;">❅</div>
+    <div class="snowflake animate-snow" style="left: 70%; animation-delay: 2.5s; font-size: 16px;">❄</div>
+    <div class="snowflake animate-snow" style="left: 80%; animation-delay: 3.5s; font-size: 24px;">❅</div>
+    <div class="snowflake animate-snow" style="left: 90%; animation-delay: 0.5s; font-size: 19px;">❄</div>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-teal-gradient-start via-teal-gradient-mid to-teal-gradient-end text-white py-20 relative mt-1">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <!-- Christmas Wreath -->
+            <div class="text-6xl mb-4 animate-bounce-gentle">🎄</div>
+            <h1 class="text-5xl font-bold mb-6">
+                🎄 Season's Greetings from Support Signal! 🎁
+            </h1>
+            <div class="text-2xl mb-4 text-christmas-gold font-semibold">
+                ✨ Wishing You Smarter Supports This Holiday Season ✨
+            </div>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                As we celebrate the season of care and compassion, transform your NDIS compliance into meaningful care improvement—helping your team hear what every signal is telling you.
+            </p>
+            <div class="bg-white bg-opacity-10 p-4 rounded-lg mb-8 max-w-2xl mx-auto">
+                <div class="text-lg font-semibold mb-2">🎁 Holiday Special Offer</div>
+                <div class="text-sm">Start your free trial before New Year and receive 3 months at 50% off!</div>
+            </div>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+                <a href="#get-started" class="inline-block bg-christmas-red text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-700 transition duration-300 shadow-lg">
+                    🎁 Unwrap Your Free Trial
+                </a>
+                <a href="#features" class="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-navy-primary transition duration-300">
+                    ❄️ Discover Features
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="py-20 bg-white relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="text-4xl mb-4">🎅</div>
+                <h2 class="text-4xl font-bold text-navy-primary mb-4">Our Gift to NDIS Providers</h2>
+                <p class="text-xl text-gray-600">Unwrap the power of intelligent compliance this holiday season</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-gradient-to-b from-christmas-red to-red-600 text-white rounded-lg shadow-lg relative overflow-hidden">
+                    <div class="absolute top-2 right-2 text-2xl animate-twinkle">⭐</div>
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="text-2xl">🎤</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">🎁 Smart Report Assistant</h3>
+                    <p class="text-red-100">Like having Santa's workshop efficiency—real-time, AI-guided report generation with voice input for faster, more accurate documentation.</p>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-b from-christmas-green to-green-600 text-white rounded-lg shadow-lg relative overflow-hidden">
+                    <div class="absolute top-2 right-2 text-2xl animate-twinkle">✨</div>
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="text-2xl">📊</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">🎄 Signal Dashboard</h3>
+                    <p class="text-green-100">Your North Star for compliance—identifies root causes, risks, and suggests improvements like Rudolph guiding the way.</p>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-b from-christmas-gold to-yellow-600 text-white rounded-lg shadow-lg relative overflow-hidden">
+                    <div class="absolute top-2 right-2 text-2xl animate-twinkle">🌟</div>
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="text-2xl">📈</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">⭐ Trend Analysis</h3>
+                    <p class="text-yellow-100">Spot patterns like tracking reindeer—surfaces systemic trends to prevent future incidents and improve care quality.</p>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-b from-navy-primary to-blue-900 text-white rounded-lg shadow-lg relative overflow-hidden">
+                    <div class="absolute top-2 right-2 text-2xl animate-twinkle">❄️</div>
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="text-2xl">👥</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">🎅 Workforce Intelligence</h3>
+                    <p class="text-blue-100">Coming in the New Year—workforce planning, compliance benchmarking, and culture dashboards to sleigh your competition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For Section -->
+    <section class="py-20 bg-gradient-to-b from-soft-grey to-white relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="text-4xl mb-4">🎁</div>
+                <h2 class="text-4xl font-bold text-navy-primary mb-4">Perfect Gifts for Every NDIS Team Member</h2>
+                <p class="text-xl text-gray-600">From elves to executives—everyone gets something special</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg border-4 border-christmas-red relative">
+                    <div class="absolute -top-3 -right-3 bg-christmas-red text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">🎄</div>
+                    <div class="text-3xl mb-3 text-center">👩‍⚕️</div>
+                    <h3 class="text-xl font-semibold text-navy-primary mb-3">Frontline Workers</h3>
+                    <p class="text-gray-600 mb-4">The gift of simplicity, clarity, and confidence—like unwrapping the perfect present every time you document.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>🎁 Easy-to-use interface</li>
+                        <li>🔔 Voice-guided reporting</li>
+                        <li>❄️ Real-time support</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-4 border-christmas-green relative">
+                    <div class="absolute -top-3 -right-3 bg-christmas-green text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">🎅</div>
+                    <div class="text-3xl mb-3 text-center">👨‍💼</div>
+                    <h3 class="text-xl font-semibold text-navy-primary mb-3">Team Leaders & Managers</h3>
+                    <p class="text-gray-600 mb-4">Better oversight than Santa's list—practical insights and early risk detection to keep your team on the nice list.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>📊 Dashboard insights</li>
+                        <li>⚠️ Risk identification</li>
+                        <li>📈 Team performance tracking</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-4 border-christmas-gold relative">
+                    <div class="absolute -top-3 -right-3 bg-christmas-gold text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">⭐</div>
+                    <div class="text-3xl mb-3 text-center">👔</div>
+                    <h3 class="text-xl font-semibold text-navy-primary mb-3">Executives & Providers</h3>
+                    <p class="text-gray-600 mb-4">The ultimate stocking stuffer—ROI from compliance and strategic advantage that keeps giving all year long.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>💰 Cost reduction</li>
+                        <li>✅ Compliance ROI</li>
+                        <li>🎯 Strategic insights</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-4 border-teal-gradient-start relative">
+                    <div class="absolute -top-3 -right-3 bg-teal-gradient-start text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">🎁</div>
+                    <div class="text-3xl mb-3 text-center">👩‍⚕️</div>
+                    <h3 class="text-xl font-semibold text-navy-primary mb-3">Allied Health Professionals</h3>
+                    <p class="text-gray-600 mb-4">Clinical precision wrapped with care—data integrity and participant outcomes that make every day feel like Christmas.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>🩺 Clinical insights</li>
+                        <li>📋 Participant outcomes</li>
+                        <li>📊 Evidence-based care</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Intelligence Section -->
+    <section class="py-20 bg-gradient-to-r from-christmas-red via-christmas-green to-christmas-gold text-white relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="text-6xl mb-6">🎄</div>
+                <h2 class="text-4xl font-bold mb-8">The Magic of Christmas Compliance ✨</h2>
+                <p class="text-xl mb-12 opacity-90">Transform your NDIS compliance from Grinch to Santa—making it the most wonderful time of the year for your team.</p>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-left bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm">
+                        <h3 class="text-2xl font-semibold mb-4">🎅 Ho Ho Ho-listically Smart Compliance</h3>
+                        <p class="mb-6 opacity-90">Our platform doesn't just track compliance—it makes it magical. Every incident becomes a present of learning, every report a step toward better care.</p>
+                        <ul class="space-y-3 opacity-90">
+                            <li class="flex items-start">
+                                <span class="text-christmas-gold mr-2">🎁</span>
+                                Real-time compliance monitoring
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-christmas-gold mr-2">⭐</span>
+                                Automated risk assessment
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-christmas-gold mr-2">🔔</span>
+                                Predictive analytics for prevention
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white text-navy-primary p-8 rounded-xl shadow-2xl">
+                        <div class="text-4xl mb-4 text-center">🎁</div>
+                        <h4 class="text-xl font-semibold mb-4 text-center">Holiday Special Pricing</h4>
+                        <p class="mb-4 text-center">Built by NDIS professionals who understand that compliance shouldn't break the bank during the holidays.</p>
+                        <div class="bg-christmas-red text-white p-4 rounded-lg text-center">
+                            <p class="font-semibold text-lg">🎄 Christmas Promise 🎄</p>
+                            <p class="text-sm">Always &lt;75% of market rate</p>
+                            <p class="text-sm">Capped at $15,000 AUD per year</p>
+                            <p class="text-xs mt-2 opacity-90">Plus 50% off first 3 months for December signups!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="text-4xl mb-4">🌟</div>
+                <h2 class="text-4xl font-bold text-navy-primary mb-4">Christmas Cards from Our Happy Customers</h2>
+                <p class="text-xl text-gray-600">Testimonials that warm our hearts like hot cocoa</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-b from-christmas-red to-red-600 text-white p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-4 right-4 text-2xl animate-twinkle">⭐</div>
+                    <div class="text-3xl mb-4 text-center">🎄</div>
+                    <p class="mb-4">"Support Signal has been the best Christmas gift to our team! The AI guidance helps our staff feel more confident, and the insights have genuinely improved our service quality. It's like having an elf helping with every report!"</p>
+                    <div class="border-t border-red-400 pt-4">
+                        <p class="font-semibold">Sarah M. 🎅</p>
+                        <p class="text-sm opacity-90">SIL Provider, Melbourne</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-b from-christmas-green to-green-600 text-white p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-4 right-4 text-2xl animate-twinkle">❄️</div>
+                    <div class="text-3xl mb-4 text-center">🎁</div>
+                    <p class="mb-4">"The dashboard insights have been more magical than Christmas morning! We can now spot trends before they become problems and make data-driven decisions. Santa's workshop couldn't be more organized than our support practices now."</p>
+                    <div class="border-t border-green-400 pt-4">
+                        <p class="font-semibold">Michael T. 🤶</p>
+                        <p class="text-sm opacity-90">Operations Manager, Brisbane</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-b from-christmas-gold to-yellow-600 text-white p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-4 right-4 text-2xl animate-twinkle">🎄</div>
+                    <div class="text-3xl mb-4 text-center">🌟</div>
+                    <p class="mb-4">"Finally, a platform that understands the NDIS environment and doesn't make us feel like we're on the naughty list! The compliance features are comprehensive yet easy to use, and the pricing means we can afford presents for the staff too."</p>
+                    <div class="border-t border-yellow-400 pt-4">
+                        <p class="font-semibold">Lisa K. 🎅</p>
+                        <p class="text-sm opacity-90">Community Support Provider, Sydney</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="py-20 bg-soft-grey relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="text-4xl mb-4">🎅</div>
+                <h2 class="text-4xl font-bold text-navy-primary mb-4">Ho Ho Ho-w Does It Work?</h2>
+                <p class="text-xl text-gray-600">Your questions answered faster than Santa's sleigh</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white border-4 border-christmas-red rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">🎁</span>
+                        <h3 class="text-lg font-semibold text-navy-primary">How does Support Signal integrate with existing NDIS systems?</h3>
+                    </div>
+                    <p class="text-gray-600 ml-11">Just like how Christmas traditions blend with modern celebrations, Support Signal complements your existing workflows. Our platform integrates with most NDIS management systems through APIs, or works as a standalone solution with magical data export capabilities.</p>
+                </div>
+                <div class="bg-white border-4 border-christmas-green rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">🎄</span>
+                        <h3 class="text-lg font-semibold text-navy-primary">What makes Support Signal different from other incident reporting tools?</h3>
+                    </div>
+                    <p class="text-gray-600 ml-11">Unlike traditional "coal in your stocking" form-filling tools, Support Signal provides real-time coaching, AI-powered insights, and predictive analytics. It's built specifically for the NDIS environment by professionals who understand your challenges—like elves who actually work in your workshop.</p>
+                </div>
+                <div class="bg-white border-4 border-christmas-gold rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">⭐</span>
+                        <h3 class="text-lg font-semibold text-navy-primary">Is there a minimum contract period?</h3>
+                    </div>
+                    <p class="text-gray-600 ml-11">No way, José! We're not the Grinch—we believe in earning your trust through value, not locking you into long contracts like chains of Christmas past. Start with a free trial and upgrade to monthly or annual plans as needed.</p>
+                </div>
+                <div class="bg-white border-4 border-teal-gradient-start rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">🔒</span>
+                        <h3 class="text-lg font-semibold text-navy-primary">How secure is our data during the holidays?</h3>
+                    </div>
+                    <p class="text-gray-600 ml-11">More secure than Santa's Nice List! We use enterprise-grade encryption, comply with Australian privacy laws, and maintain NDIS-specific data handling protocols. Your data never leaves Australian servers—it's safer than milk and cookies on Christmas Eve.</p>
+                </div>
+                <div class="bg-white border-4 border-navy-primary rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">📋</span>
+                        <h3 class="text-lg font-semibold text-navy-primary">Can Support Signal help with NDIS audits?</h3>
+                    </div>
+                    <p class="text-gray-600 ml-11">Absolutely! Our platform generates audit-ready reports faster than wrapping presents, tracks compliance metrics like Santa's efficiency tracker, and provides documentation that demonstrates your commitment to continuous improvement and quality care. No more audit anxiety!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="get-started" class="py-20 bg-gradient-to-r from-christmas-red via-christmas-green to-christmas-gold text-white relative">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="text-6xl mb-6">🎄</div>
+            <h2 class="text-4xl font-bold mb-6">Your Christmas Wish Come True! 🌟</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join the merry band of NDIS providers who are turning compliance into their competitive Christmas advantage!</p>
+            
+            <!-- Lead Capture Form -->
+            <div class="bg-white bg-opacity-15 p-8 rounded-xl max-w-md mx-auto mb-8 backdrop-blur-sm">
+                <div class="text-2xl mb-4">🎁</div>
+                <h3 class="text-xl font-semibold mb-4">Unwrap Your Free Trial</h3>
+                <form action="mailto:hello@supportsignal.com" method="post" enctype="text/plain">
+                    <div class="space-y-4">
+                        <input type="text" name="name" placeholder="🎅 Your Name" required class="w-full p-3 rounded-lg border border-gray-300 text-navy-primary">
+                        <input type="email" name="email" placeholder="📧 Email Address" required class="w-full p-3 rounded-lg border border-gray-300 text-navy-primary">
+                        <input type="text" name="organisation" placeholder="🏢 Organisation Name" required class="w-full p-3 rounded-lg border border-gray-300 text-navy-primary">
+                        <button type="submit" class="w-full bg-navy-primary text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-900 transition duration-300 shadow-lg">
+                            🎁 Start My Magical Free Trial
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-sm mb-8">
+                <div class="flex items-center justify-center bg-white bg-opacity-10 p-3 rounded-lg">
+                    <span class="text-christmas-gold mr-2">🎁</span>
+                    No credit card required
+                </div>
+                <div class="flex items-center justify-center bg-white bg-opacity-10 p-3 rounded-lg">
+                    <span class="text-christmas-gold mr-2">🎄</span>
+                    30-day free trial
+                </div>
+                <div class="flex items-center justify-center bg-white bg-opacity-10 p-3 rounded-lg">
+                    <span class="text-christmas-gold mr-2">⭐</span>
+                    Setup in under 24 hours
+                </div>
+            </div>
+            
+            <div class="bg-white bg-opacity-20 p-6 rounded-xl max-w-lg mx-auto">
+                <div class="text-lg font-semibold mb-2">🎁 Limited Time Holiday Offer</div>
+                <div class="text-sm">Sign up before New Year's Eve and receive:</div>
+                <div class="text-sm mt-2">✨ 50% off your first 3 months</div>
+                <div class="text-sm">🎄 Priority setup during holiday season</div>
+                <div class="text-sm">🎅 Dedicated holiday support team</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-primary text-white py-12 relative">
+        <div class="christmas-lights h-1 w-full absolute bottom-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-2">🎄</span>
+                        <h3 class="text-2xl font-bold">Support Signal</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Where insight meets action. Supporting support—through clarity and care.</p>
+                    <p class="text-sm text-gray-400">Every signal tells a story. We help you listen. 🌟</p>
+                    <div class="mt-4 text-sm text-christmas-gold">
+                        🎁 Wishing you and your team a wonderful holiday season!
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 flex items-center">
+                        <span class="mr-2">🎁</span>Product
+                    </h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#features" class="hover:text-christmas-gold transition duration-300">Features</a></li>
+                        <li><a href="#" class="hover:text-christmas-gold transition duration-300">Holiday Pricing</a></li>
+                        <li><a href="#" class="hover:text-christmas-gold transition duration-300">Integrations</a></li>
+                        <li><a href="#" class="hover:text-christmas-gold transition duration-300">Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 flex items-center">
+                        <span class="mr-2">📚</span>Resources
+                    </h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-christmas-gold transition duration-300">NDIS Holiday Guides</a></li>
+                        <li><a href="#" class="hover:text-christmas-gold transition duration-300">Best Practices</a></li>
+                        <li><a href="#" class="hover:text-christmas-gold transition duration-300">Holiday Webinars</a></li>
+                        <li><a href="#" class="hover:text-christmas-gold transition duration-300">24/7 Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 flex items-center">
+                        <span class="mr-2">🎅</span>Contact Santa's Helpers
+                    </h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>📧 hello@supportsignal.com</li>
+                        <li>☎️ 1300 SUPPORT</li>
+                        <li>🇦🇺 Sydney, Australia</li>
+                        <li class="text-christmas-gold">🎄 Happy Holidays!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Support Signal. All rights reserved. | 🎁 Privacy Policy | 🎄 Terms of Service</p>
+                <p class="mt-2 text-christmas-gold text-sm">May your NDIS compliance be merry and bright! ✨</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
